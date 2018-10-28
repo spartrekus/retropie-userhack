@@ -1,0 +1,33 @@
+
+################################
+################################
+################################
+# UNICMD file for creation  !
+################################
+################################
+################################
+
+
+
+
+#  The game I will show how to add to Retropie is the shareware version of Wolfenstein 3D from the DOS Games Archive.  At the terminal, type the following command to create a folder in our roms folders.
+!bash   mkdir -p ~/RetroPie/roms/pc/wolf3d
+
+# Change the working directory to wolf3d.
+!sh   cd ~/RetroPie/roms/pc/wolf3d
+
+# Download and unzip the game from Dos Games Archive.
+!sh   wget http://image.dosgamesarchive.com/games/1wolf14.zip   
+!sh  unzip 1wolf14.zip  
+
+# Check the contents of the zip file with the ls command to find a file called install.exe. Games in DOS generally needed to be installed first to extract the game data. They can be identified with file names such install.exe or setup.exe. You can refer to the DOSBox game wiki to check whether there is an installer file as well as finding what the executable is (see below).
+# Wolfenstein 3D shareware can only be installed in DOSBox so launch DOSBox by using the +Start DOSBox script from EmulationStation with the following commands from the terminal. This is the only occasion when you need to use the DOSBox interface.
+
+
+!enddoc
+#!/bin/bash
+!create  /opt/retropie/emulators/dosbox/bin/dosbox -c "mount c /home/pi/RetroPie/roms/pc" -c "c:" -c "cd WOLF3D" -c "WOLF3D.EXE" -c "exit" 
+# sudo chmod +x wolf3d.sh
+
+!enddoc
+
