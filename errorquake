@@ -1,0 +1,8 @@
+Game is DarkPlaces-Quake using base gamedir id1
+gamename for server filtering: DarkPlaces-Quake
+DarkPlaces-Quake Linux 23:59:31 Oct 18 2018 - release
+Current nice level is below the soft limit - cannot use niceness
+Playing shareware version.
+Skeletal animation uses generic code path (SSE not compiled in)
+DPSOFTRAST not available (SSE2 not compiled in)
+Quake Error: Failed to init SDL video subsystem: No available video device
